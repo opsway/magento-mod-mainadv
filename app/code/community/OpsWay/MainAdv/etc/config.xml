@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <OpsWay_MainAdv>
+      <version>0.1.0</version>
+    </OpsWay_MainAdv>
+  </modules>
+      <global>
+        <helpers>
+            <mainadv>
+                <class>OpsWay_MainAdv_Helper</class>
+            </mainadv>
+        </helpers>
+        <blocks>
+            <mainadv>
+                <class>OpsWay_MainAdv_Block</class>
+            </mainadv>
+        </blocks>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <mainadv>
+                    <file>mainadv.xml</file>
+                </mainadv>
+            </updates>
+        </layout>
+    </frontend>
+</config> 
