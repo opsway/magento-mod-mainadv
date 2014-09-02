@@ -21,7 +21,7 @@ class OpsWay_MainAdv_Block_Template extends Mage_Core_Block_Template
                 $this->pagetype = "product";
             } elseif (in_array("catalog_category_view", $handles)) {
                 $this->pagetype = "category";
-            } elseif (in_array("checkout_cart_index", $handles)) {
+            } elseif (in_array("onepagecheckout_index_index", $handles)) {
                 $this->pagetype = "basket";
             } elseif (in_array("onepagecheckout_index_success", $handles)) {
                 $this->pagetype = "checkout";
@@ -96,6 +96,7 @@ class OpsWay_MainAdv_Block_Template extends Mage_Core_Block_Template
         $customer->setWebsiteId(Mage::app()->getWebsite()->getId()); 
         $customer->loadByEmail($orderData['customer_email']); 
 
+        $info['ty_orderid']  = $orderId;
         $info['ty_orderamt'] = $orderData['grand_total'];
         $info['ty_orderstatus'] = $orderData['status'];
         $info['ty_orderdate'] = date("m.d.y");
